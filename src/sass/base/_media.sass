@@ -1,4 +1,5 @@
 @media (max-width: 1799px)
+  //General
   .container
     width: 1200px
   .text
@@ -9,6 +10,7 @@
     &_fz30
       font-size: 25px
       line-height: 35px
+  //Header
   .logo
     width: 100px
   .nav
@@ -17,12 +19,13 @@
       margin-right: 25px
     &_header
       margin-left: 40px
+  //Home
   .home
     margin-top: 135px
     &__background
       width: 600px
-      top: -291px
-      right: 30px
+      top: -266px
+      right: -75px
     &__title, &__subtitle
       width: 578px
     &__subtitle
@@ -34,6 +37,16 @@
       margin-left: 35px
     &__links
       margin-top: 25px
+  //Products
+  .products-wrapper
+    grid-template-rows: 384px
+    grid-auto-rows: 384px
+  .product
+    &__title
+      margin-top: 25px
+    &:hover
+      &::before
+        font-size: 40px
 @media (max-width: 1399px)
   .container
     width: 1100px
@@ -55,7 +68,7 @@
     &__background
       width: 570px
       top: -256px
-      right: 0
+      right: -45px
     &__title
       width: 506px
     &__btn
@@ -63,22 +76,82 @@
       height: 47px
   .text
     font-size: 19px
+  //Products
+  .products-wrapper
+    grid-template-rows: 356.66px
+    grid-auto-rows: 356.66px
+    gap: 15px
+  .product
+    picture
+      width: 85%
+    &__img
+      width: 100%
+    &__title
+      margin-top: 20px
+      font-size: 27px
+    &:hover
+      &::before
+        font-size: 35px
 @media (max-width: 1199px)
+  //General
   .container
-    width: 506px
+    width: 900px
+  //Header
   .nav
     &_header
       margin: 0 auto
+  //Home
   .home
+    width: 506px
+    margin: 135px auto 0 auto
     &__background
       display: none
     &__subtitle
       width: 506px
+  //Bestsellers
+  .bestsellers
+    margin-top: 250px
+  //Products
+  .products-wrapper
+    margin-top: 75px
+    grid-template-rows: 290px
+    grid-auto-rows: 290px
+  .product
+    &__title
+      margin-top: 15px
+      font-size: 23px
+    &:hover
+      &::before
+        font-size: 30px
 @media (max-width: 991px)
+  //General
+  .container
+    width: 700px
+  //Header
   .nav
     &_header
       margin-left: 30px
+    &__item:hover
+      text-decoration: none
+  //Home
+  .home
+    &__btn:hover
+      background-color: #e3a469
+    &__link:hover
+      text-decoration: none
+  //Products
+  .products-wrapper
+    grid-template: repeat(2, 342.5px) / repeat(2, 1fr)
+    grid-auto-rows: 342.5px
+  .product
+    &:hover
+      &::before
+        content: none
 @media (max-width: 767px)
+  //General
+  .container
+    width: 500px
+  //Header
   .nav
     position: fixed
     top: 0
@@ -99,8 +172,6 @@
       font-size: 25px
       font-weight: 700
       color: #443c35
-    &__item:hover
-      text-decoration: none
     &_active
       left: 0
   .hamburger
@@ -126,12 +197,14 @@
           display: none
         &:nth-child(3)
           transform: translateY(3px) rotate(45deg)
-  .home
-    &__btn:hover
-      background-color: #e3a469
-    &__link:hover
-      text-decoration: none
+  //Products
+  .products-wrapper
+    width: 300px
+    margin: 50px auto 0 auto
+    grid-template: repeat(3, 300px) / 300px
+    grid-auto-rows: 300px
 @media (max-width: 575px)
+  //General
   .container
     width: 320px
     padding: 0 5px
@@ -143,6 +216,7 @@
     &_fz30
       font-size: 17px
       line-height: 22px
+  //Header
   .logo
     width: 65px
   .header
@@ -159,7 +233,9 @@
     &_active
       span
         margin-bottom: -1px
+  //Home
   .home
+    width: 310px
     margin-top: 75px
     &__title, &__subtitle
       width: 100%
@@ -172,3 +248,11 @@
       height: 42px
     &__link
       margin-left: 20px
+  //Products
+  .products-wrapper
+    width: 200px
+    grid-template: repeat(3, 200px) / 200px
+    grid-auto-rows: 200px
+  .product
+    &__title
+      font-size: 15px

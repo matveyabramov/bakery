@@ -1,0 +1,35 @@
+.products-wrapper
+  margin-top: 100px
+  display: grid
+  grid-template: 464px / repeat(3, 1fr)
+  grid-auto-rows: 464px
+  gap: 24px
+
+.product
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  border-radius: 30px
+  border: 1px solid #5e5348
+  &__title
+    margin-top: 35px
+    color: #5e5348
+    font-size: 30px
+    font-weight: 700
+  &:hover
+    &::before
+      content: 'Make an Order'
+      position: absolute
+      top: 0
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 30px
+      background-color: rgba(0, 0, 0, 0.85)
+      color: #ffffff
+      font-size: 47px
+      font-weight: 700
