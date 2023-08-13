@@ -41,4 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
             delay: 3000
         }
     })
+
+    //Load more btn
+
+    const loadMore = document.querySelector('.menu__more')
+    let menuItems = Array.from(document.querySelectorAll('.menu__item'))
+
+    menuItems = menuItems.filter((el, index) => index > 2)
+
+    loadMore.addEventListener('click', () => {
+        for (let i = 0; i < 3; i++) {
+            menuItems[i].style.display = 'flex'
+        }
+        menuItems = menuItems.filter((el, index) => index > 2)
+
+        if (menuItems.length === 0) {
+            loadMore.style.display = 'none'
+        }
+    })
 })
