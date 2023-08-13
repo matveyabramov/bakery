@@ -1,0 +1,52 @@
+.reviews
+  &__title
+    text-align: center
+  &__wrapper
+    position: relative
+  &__subwrapper
+    width: 100%
+    height: 100%
+  &__button
+    position: absolute
+    top: 50%
+    transform: translateY(-100%)
+    border: none
+    cursor: pointer
+    z-index: 1
+    background: none
+    &_prev
+      left: -100px
+    &_next
+      right: -100px
+  &__slider
+    width: 100%
+    height: 100%
+  &__slide
+    display: flex
+    justify-content: space-between
+    align-items: center
+    user-select: none
+  &__img
+    pointer-events: none
+  &__desc
+    width: 709px
+  &__name, &__location
+    font-size: 20px
+    color: #5e5348
+  &__name
+    font-weight: 700
+  &__dots
+    margin-top: 25px
+    display: flex
+    justify-content: center
+
+.swiper-pagination-bullet
+  width: 25px
+  height: 25px
+  margin-right: 10px
+  border-radius: 100%
+  border: 2px solid #5e5348
+  background: none
+  opacity: 1
+  &-active
+    background-color: #5e5348

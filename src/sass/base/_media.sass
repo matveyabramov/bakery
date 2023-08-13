@@ -54,6 +54,27 @@
       width: 600px
     &__desc
       width: 500px
+  //Reviews
+  .reviews
+    picture
+      width: 500px
+    &__img
+      width: 100%
+    &__desc
+      width: 625px
+    &__location, &__name
+      font-size: 17px
+    &__button
+      &_prev
+        left: -70px
+      &_next
+        right: -70px
+    &__dots
+      margin-top: 20px
+  .swiper-pagination-bullet
+    width: 23px
+    height: 23px
+    margin-right: 8px
 @media (max-width: 1399px)
   //General
   .container
@@ -104,6 +125,17 @@
   .history
     &__img
       width: 500px
+  //Reviews
+  .reviews
+    &__desc
+      width: 550px
+    &__button
+      &_prev
+        left: -40px
+      &_next
+        right: -40px
+      svg
+        width: 25px
 @media (max-width: 1199px)
   //General
   .container
@@ -139,6 +171,12 @@
   //History
   .history
     &__img, &__desc
+      width: 400px
+  //Reviews
+  .reviews
+    picture
+      width: 450px
+    &__desc
       width: 400px
 @media (max-width: 991px)
   //General
@@ -176,6 +214,24 @@
       text-align: center
     &__img
       display: none
+  //Reviews
+  .reviews
+    &__desc
+      margin: 0 auto
+    picture
+      display: none
+    &__button
+      &_prev
+        left: 30px
+      &_next
+        right: 30px
+      svg
+        width: 23px
+    &__dots
+      margin-top: 15px
+  .swiper-pagination-bullet
+    width: 23px
+    height: 23px
 @media (max-width: 767px)
   //General
   .container
@@ -240,6 +296,13 @@
       margin-top: 30px
     &__text
       margin-top: 5px
+  //Reviews
+  .reviews
+    &__button
+      &_prev
+        left: -10px
+      &_next
+        right: -10px
 @media (max-width: 575px)
   //General
   body
@@ -301,3 +364,14 @@
   .history
     &__item
       margin-top: 15px
+  //Reviews
+  .reviews
+    &__location, &__name
+      font-size: 13px
+    &__button
+      display: none
+    &__dots
+      margin-top: 10px
+  .swiper-pagination-bullet
+    width: 20px
+    height: 20px
