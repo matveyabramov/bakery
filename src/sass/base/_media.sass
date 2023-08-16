@@ -75,6 +75,15 @@
     width: 23px
     height: 23px
     margin-right: 8px
+  //Order
+  .order
+    &__success
+      &-title
+        font-size: 35px
+      &-text, &-button
+        margin: 20px auto 0 auto
+      &-button
+        font-size: 20px
 @media (max-width: 1399px)
   //General
   .container
@@ -143,6 +152,19 @@
         right: -40px
       svg
         width: 25px
+  //Order
+  .order
+    &__subtitle
+      width: 820px
+    &__form
+      width: 650px
+      padding: 40px
+    &__input, &__label, &__textarea, .iti__selected-dial-code
+      font-size: 23px
+    .iti--separate-dial-code .iti__selected-dial-code
+      margin-left: 8px
+    &__button
+      font-size: 27px
 @media (max-width: 1199px)
   //General
   .container
@@ -185,6 +207,13 @@
       width: 450px
     &__desc
       width: 400px
+  //Order
+  .order
+    &__form
+      margin: 75px auto 0 auto
+      width: 550px
+    &__button
+      font-size: 25px
 @media (max-width: 991px)
   //General
   .container
@@ -239,6 +268,11 @@
   .swiper-pagination-bullet
     width: 23px
     height: 23px
+  //Order
+  .order
+    &__subtitle
+      width: 686px
+      font-size: 23px
 @media (max-width: 767px)
   //General
   .container
@@ -322,6 +356,43 @@
   .product
     &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9), &:nth-child(10), &:nth-child(11), &:nth-child(12)
       display: none
+  //Order
+  .order
+    &__subtitle
+      display: none
+    &__form
+      margin: 50px auto 0 auto
+      padding: 35px
+      width: 450px
+      &-item
+        margin-top: 18px
+    &__input, &__label, &__textarea, .iti__selected-dial-code
+      font-size: 20px
+    .iti--separate-dial-code .iti__selected-dial-code
+      margin-left: 10px
+    &__input, &__textarea
+      padding: 10px 15px
+    &__checkbox-fake
+      margin-right: 15px
+      width: 30px
+      height: 30px
+      &::before
+        width: 21px
+        height: 18px
+    &__button
+      padding: 15px 20px
+      font-size: 23px
+    &__success
+      &-window
+        padding: 35px 25px 35px 25px
+      &-title
+        font-size: 30px
+      &-button, &-text
+        margin: 15px auto 0 auto
+      &-text
+        width: 500px
+      &-button
+        padding: 15px 20px
 @media (max-width: 575px)
   //General
   body
@@ -396,3 +467,35 @@
   .swiper-pagination-bullet
     width: 20px
     height: 20px
+  //Order
+  .order
+    &__form
+      margin: 35px auto 0 auto
+      padding: 20px
+      width: 310px
+      &-item
+        margin-top: 15px
+    .iti__selected-dial-code, &__input, &__label, &__textarea
+      font-size: 18px
+    &__textarea
+      height: 230px
+    &__checkbox-fake
+      width: 27px
+      height: 27px
+      &::before
+        width: 19px
+        height: 16px
+    &__form-privacy, &__button
+      margin-top: 18px
+    &__button
+      font-size: 18px
+    &__success
+      &-window
+        padding: 25px 10px 25px 10px
+      &-title
+        font-size: 20px
+        line-height: 20px
+      &-text
+        width: 258px
+      &-button
+        font-size: 17px
