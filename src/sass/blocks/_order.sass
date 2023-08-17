@@ -70,7 +70,9 @@
     &:hover
       background-color: #282420
   &__checkbox
-    display: none
+    position: absolute
+    opacity: 0
+    visibility: hidden
     &-fake
       position: relative
       margin-right: 20px
@@ -107,7 +109,7 @@
     background-color: rgba(0, 0, 0, .8)
     opacity: 0
     visibility: hidden
-    z-index: 3
+    z-index: 4
     transition: all .5s ease 0s
     &-window
       padding: 35px 56px 35px 56px

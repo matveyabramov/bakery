@@ -21,6 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+    //Product link
+
+    const product = document.querySelectorAll('.product')
+    product.forEach(e => {
+        e.addEventListener('click', () => window.location.href = '#order')
+    })
+
     //Slider
 
     new Swiper('.swiper', {
