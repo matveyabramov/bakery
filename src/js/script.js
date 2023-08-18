@@ -172,4 +172,17 @@ document.addEventListener('DOMContentLoaded', () => {
         popUp.style.visibility = 'hidden'
         popUp.style.opacity = 0
     })
+
+    //Pageup
+
+    const pageUp = document.querySelector('.pageup')
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 1600) {
+            pageUp.style.visibility = 'visible'
+            pageUp.style.opacity = 1
+        } else {
+            pageUp.style.visibility = 'hidden'
+            pageUp.style.opacity = 0
+        }
+    })
 })
