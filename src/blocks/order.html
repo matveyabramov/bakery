@@ -1,0 +1,33 @@
+<section class="order mt_100" id="order">
+    <h2 class="order__title title">Order Form</h2>
+    <div class="order__subtitle title title_fz30 title_fw400">We are thrilled to bring you an exquisite selection of handcrafted treats that will elevate your taste experience to new heights. To place your order, simply fill out this easy-to-use form and we will contact you as soon as possible to confirm the details.</div>
+    <form class="order__form" action="#">
+        <div class="order__form-item">
+            <label class="order__label" for="name">Your name:</label>
+            <input class="order__input _req" name="name" type="text" id="name">
+        </div>
+
+        <div class="order__form-item">
+            <label class="order__label" for="phone">Your phone number:</label>
+            <input class="order__input _req" name="phone" type="tel" id="phone">
+        </div>
+
+        <div class="order__form-item">
+            <label class="order__label" for="email">Your E-Mail:</label>
+            <input class="order__input _req" name="email" type="email" id="email">
+        </div>
+
+        <div class="order__form-item">
+            <label class="order__label" for="message">Your message:</label>
+            <textarea class="order__textarea" name="message" id="message"></textarea>
+        </div>
+
+        <label class="order__form-privacy">
+            <input class="order__checkbox _req" id="checkbox" type="checkbox">
+            <span class="order__checkbox-fake"></span>
+            <label class="order__label order__label_privacy" for="checkbox">I agree to the <a class="order__privacy-link" href="privacy.html">Privacy Policy</a></label>
+        </label>
+
+        <button class="order__button">Make an Order</button>
+    </form>
+</section>

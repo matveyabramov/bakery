@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Setting up phone mask
     const iti = window.intlTelInput(phoneInput, {
-        utilsScript: 'js/utils.js',
+        utilsScript: 'js/utils.min.js',
         separateDialCode: true,
         preferredCountries: [],
         initialCountry: 'auto',
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(form)
             formData.set('phone', iti.getNumber())
 
-            const response = await fetch('../mailer/smart.php', {
+            const response = await fetch('../mailer/sendmail.php', {
                 method: 'POST',
                 body: formData,
             })
