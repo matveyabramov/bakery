@@ -20,14 +20,14 @@ import changed from 'gulp-changed'
 const sass = gulpSass(dartSass)
 
 gulp.task('clean:docs', () => {
-    return gulp.src('./dist', { read: false, allowEmpty: true })
+    return gulp.src('./docs', { read: false, allowEmpty: true })
         .pipe(clean({ force: true }))
 })
 
 gulp.task('server:docs', () => {
     browserSync.init({
         server: {
-            baseDir: './dist'
+            baseDir: './docs'
         }
     })
 })
@@ -44,19 +44,19 @@ const plumberConfig = (title) => {
 
 gulp.task('html:docs', () => {
     return gulp.src('./src/*.html')
-        .pipe(changed('./dist'))
+        .pipe(changed('./docs'))
         .pipe(plumber(plumberConfig('HTML')))
         .pipe(fileInclude({
             prefix: '@@',
             basepath: '@file'
         }))
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./docs'))
 })
 
 gulp.task('styles:docs', () => {
     return gulp.src('./src/sass/**/*.+(scss|sass)')
-        .pipe(changed('./dist/css'))
+        .pipe(changed('./docs/css'))
         .pipe(plumber(plumberConfig('Styles')))
         .pipe(sassGlob())
         .pipe(sass())
@@ -66,12 +66,12 @@ gulp.task('styles:docs', () => {
             suffix: '.min'
         }))
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./docs/css'))
 })
 
 gulp.task('js:docs', () => {
     return gulp.src(['./src/js/*.js', '!./src/js/utils.js'])
-        .pipe(changed('./dist/js'))
+        .pipe(changed('./docs/js'))
         .pipe(plumber(plumberConfig('JS')))
         .pipe(babel())
         .pipe(concat('script.js'))
@@ -81,7 +81,7 @@ gulp.task('js:docs', () => {
             },
             noSource: true
         }))
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('./docs/js'))
 })
 
 gulp.task('utils:docs', () => {
@@ -93,32 +93,32 @@ gulp.task('utils:docs', () => {
             },
             noSource: true
         }))
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('./docs/js'))
         .pipe(browserSync.stream())
 })
 
 gulp.task('icons:docs', () => {
     return gulp.src('./src/icons/**/*')
-        .pipe(changed('./dist/icons'))
+        .pipe(changed('./docs/icons'))
         .pipe(imagemin({ verbose: true }))
-        .pipe(gulp.dest('./dist/icons'))
+        .pipe(gulp.dest('./docs/icons'))
 })
 
 gulp.task('images:docs', () => {
     return gulp.src('./src/img/**/*')
-        .pipe(changed('./dist/img'))
+        .pipe(changed('./docs/img'))
         .pipe(imagemin({ verbose: true }))
-        .pipe(gulp.dest('./dist/img'))
+        .pipe(gulp.dest('./docs/img'))
 })
 
 gulp.task('fonts:docs', () => {
     return gulp.src("./src/fonts/**/*")
-        .pipe(changed('./dist/fonts'))
-        .pipe(gulp.dest("./dist/fonts"))
+        .pipe(changed('./docs/fonts'))
+        .pipe(gulp.dest("./docs/fonts"))
 })
 
 gulp.task('mailer:docs', () => {
     return gulp.src("./src/mailer/**/*")
-        .pipe(changed('./dist/mailer'))
-        .pipe(gulp.dest("./dist/mailer"))
+        .pipe(changed('./docs/mailer'))
+        .pipe(gulp.dest("./docs/mailer"))
 })
